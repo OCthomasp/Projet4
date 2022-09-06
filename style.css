@@ -7,6 +7,31 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.logo{
+    width: 185px;
+}
+
+.premier-plan{
+    position: relative;
+}
+
+.fa-twitter:hover{
+    color: #1d9bf0 !important;
+}
+
+.fa-facebook:hover{
+    color: #1877f2 !important;
+}
+
+.fa-dribbble:hover{
+    color: #ea4c89 !important;
+}
+
+.fa-instagram:hover{
+    color: #be2f90 !important;
+}
+
+
 a,
 button {
     transition: all .3s ease-in-out;
@@ -133,7 +158,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+    color: #fff;
 }
 
 .d-bloc .a-btn:hover,
@@ -309,6 +334,7 @@ a:hover {
 
 .navbar-brand img[src$=svg] {
     min-width: 100px;
+    height: 50px;
 }
 
 .nav-center .navbar-brand img {
@@ -537,12 +563,16 @@ a[data-lightbox] {
 }
 
 a[data-lightbox]:hover::before {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     content: "+";
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
     font-size: 32px;
     width: 50px;
     height: 50px;
-    margin-left: -25px;
     border-radius: 50%;
     background: rgba(0, 0, 0, .6);
     color: #FFF;
@@ -550,6 +580,7 @@ a[data-lightbox]:hover::before {
     z-index: 1;
     position: absolute;
     top: 50%;
+    left: 40.5%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
@@ -610,7 +641,7 @@ a[data-lightbox]:hover img {
 .next-lightbox,
 .prev-lightbox {
     font-size: 20px;
-    color: rgba(255, 255, 255, .9);
+    color: #fff;
     background: rgba(0, 0, 0, .5);
     transition: all .2s ease-in-out;
     position: absolute;
@@ -647,8 +678,7 @@ h5,
 h6,
 p,
 label,
-.btn,
-a {
+.btn{
     font-family: "helvetica";
     font-weight: 400;
     color: #575757!important;
@@ -677,7 +707,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .tight-width-whitespace {
@@ -705,12 +735,12 @@ p {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 26px;
     line-height: 1.4em;
 }
 
 h3 {
-    font-size: 15px;
+    font-size: 18px;
     text-transform: uppercase;
     font-weight: 700;
     color: #333333!important;
@@ -740,7 +770,7 @@ h4 {
 }
 
 .portfolio-thumb {
-    margin-bottom: 24px;
+    margin: auto auto 24px auto;
 }
 
 .portfolio-row {
@@ -753,7 +783,7 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgba(77, 67, 42, 0.8);
     padding: 40px 40px 40px 40px;
 }
 
@@ -780,13 +810,14 @@ h4 {
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
+    color: #000 !important;
 }
 
-.btn-atomic-tangerine:hover {
+.btn-atomic-tangerine:hover, .btn-atomic-tangerine:focus {
     background: #c27956!important;
     color: #FFFFFF!important;
 }
+
 
 .ltc-white {
     color: #FFFFFF!important;
@@ -890,6 +921,10 @@ h4 {
 }
 
 @media (max-width: 767px) {
+    a[data-lightbox]:hover::before{
+        left: 45.5%;
+    }
+    
     .page-container {
         overflow-x: hidden;
         position: relative;
