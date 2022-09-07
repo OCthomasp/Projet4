@@ -15,6 +15,14 @@ body {
     position: relative;
 }
 
+.review-text{
+    font-style: italic;
+}
+
+.review-source{
+    font-weight: 700;
+}
+
 .fa-twitter:hover{
     color: #1d9bf0 !important;
 }
@@ -31,6 +39,44 @@ body {
     color: #be2f90 !important;
 }
 
+.small-icon{
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .flex{
+        flex-direction: column-reverse;
+    }
+    #contact-info::after{
+        display: block;
+        margin: 10px 0 10px 0;
+        content: "";
+        width: auto;
+        height: 3px;
+        background-color: #f3976c;
+    }
+}
+
+
+
+.bloc-margin{
+    margin: 0 20px 0 20px;
+}
+
+#contact-info p{
+    white-space: nowrap;
+}
+
+.atomic-tangerine {
+    color: #F3976C !important;
+}
 
 a,
 button {
@@ -49,7 +95,7 @@ a:hover {
     bottom: 0;
     width: 100%;
     z-index: 100000;
-    background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
+    background: url("img/pageload-spinner.gif") center center no-repeat #FFF;
 }
 
 .bloc {
@@ -537,12 +583,13 @@ button {
 }
 
 .scrollToTop {
+    color: #fff !important;
     width: 40px;
     height: 40px;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    opacity: 0;
+    opacity: 1;
     z-index: 500;
     transition: all .3s ease-in-out;
 }
@@ -681,7 +728,7 @@ label,
 .btn{
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: #575757;
 }
 
 .container {
@@ -805,7 +852,7 @@ h4 {
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #fff!important;
 }
 
 .btn-atomic-tangerine {
@@ -879,13 +926,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -903,20 +950,10 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
     .bloc-group,
     .bloc-group .bloc {
         display: block;
         width: 100%;
-    }
-    .bloc-fill-screen .fill-bloc-top-edge,
-    .bloc-fill-screen .fill-bloc-bottom-edge {
-        padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
